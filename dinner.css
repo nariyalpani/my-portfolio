@@ -1,0 +1,286 @@
+body {
+    background-color: black;
+    margin: 0;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar Fix */
+.nav-links {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* This targets the links inside your nav-links */
+.nav-links a {
+    transition: 0.3s; /* This makes the color change smooth, not instant */
+}
+
+/* This is the magic part for the hover */
+.nav-links a:hover {
+    background: linear-gradient(270deg, #DF8908 10%, #ff1d15 100%);
+    -webkit-background-clip: text; /* Clips the gradient to the text only */
+    -webkit-text-fill-color: transparent; /* Makes the original white color disappear */
+    transform: translateY(-2px); /* Optional: makes the link pop up slightly */
+}
+
+/* We don't want the gradient effect on the "Contact me" button because it's already a solid button */
+.nav-links a.contact:hover {
+    -webkit-text-fill-color: white; /* Keeps the text white on the button */
+    opacity: 0.9; /* Makes the button slightly fade when hovered */
+}
+
+/* 1. This handles the Home, Client-Side, and Reports links */
+.nav-links a:not(.contact):hover {
+    background: linear-gradient(270deg, #DF8908 10%, #ff1d15 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.3s;
+}
+
+/* 2. This handles the "Contact me" button specifically */
+.nav-links a.contact:hover {
+    background: linear-gradient(270deg, #ff1d15 10%, #DF8908 100%); /* Flips the gradient direction */
+    -webkit-text-fill-color: white; /* Forces text to stay white */
+    opacity: 1; /* Ensures it doesn't fade out */
+    transform: scale(1.05); /* Makes the button grow slightly instead of disappearing */
+    transition: 0.3s;
+}
+.contact {
+    background: linear-gradient(270deg, #DF8908 10%, #ff1d15 100%);
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+    background: linear-gradient(270deg, #DF8908 10%, #ff1d15 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- THE SIDE-BY-SIDE FIX --- */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Adjust height based on screen */
+    padding: 0 10%;   /* Proper spacing from sides */
+}
+
+.hero-container {
+    display: flex;       /* This puts items in a row */
+    align-items: center; /* Aligns them vertically in the center */
+    gap: 50px;           /* Space between image and text */
+    max-width: 1100px;
+}
+
+.hero-img img {
+    width: 400px;
+    border-radius: 15px;
+    border: 2px solid #333;
+    /* This makes the glow appear smoothly */
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.hero-img img:hover {
+    transform: scale(1.02); /* Makes the image pop out slightly */
+    
+    /* This creates the Yellow to Red glow effect */
+    /* Syntax: drop-shadow(offset-x offset-y blur-radius color) */
+    filter: drop-shadow(0 0 15px #DF8908) drop-shadow(0 0 30px #ff1d15);
+}
+
+.hero-text {
+    max-width: 600px;    /* Keeps text from stretching too wide */
+    text-align: left;    /* Ensures text stays aligned left */
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-text h3 {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+
+.hero-text:hover {
+    background: linear-gradient(270deg, #DF8908 10%, #ff1d15 100%);
+    -webkit-background-clip: text; /* Clips the gradient to the text only */
+    -webkit-text-fill-color: transparent; /* Makes the original white color disappear */
+    transform: translateY(-2px); /* Optional: makes the link pop up slightly */
+}
+
+.research-content {
+    display: flex;         /* Puts image and text in a row */
+    align-items: center;   /* Centers them vertically */
+    gap: 20px;             /* Space between image and text */
+    background: #111;      /* Dark background for the box */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+.research-content {
+    display: flex;         /* Puts image and text in a row */
+    align-items: center;   /* Centers them vertically */
+    gap: 20px;             /* Space between image and text */
+    background: #111;      /* Dark background for the box */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column; /* This stacks the "Connect With Me" text ON TOP of the icons */
+    justify-content: center; /* Centers vertically */
+    align-items: center;     /* Centers horizontally */
+    padding: 80px 0;         /* Gives the section some breathing room */
+    background-color: #000;  /* Keeps it dark */
+}
+
+.container-center-stuff h4 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+}
+
+.social-icons {
+    display: flex;
+    gap: 30px;              /* Equal space between each icon */
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 40px;            /* Set a uniform size for all icons */
+    transition: 0.4s ease;  /* Smooth transition for the hover effect */
+    filter: grayscale(100%); /* Makes them look "stealthy" until hovered */
+}
+
+/* --- THE COOL HOVER EFFECT --- */
+.social-icons img:hover {
+    filter: grayscale(0%);  /* Brings back the original color */
+    transform: scale(1.3);   /* Makes the icon grow slightly */
+    filter: drop-shadow(0 0 10px #ff1d15); /* Adds a red neon glow */
+}
+
+.container-center-stuff h4:hover{
+background: linear-gradient(270deg, #DF8908 10%, #ff1d15 100%);
+    -webkit-background-clip: text; /* Clips the gradient to the text only */
+    -webkit-text-fill-color: transparent; /* Makes the original white color disappear */
+    transform: translateY(-2px); /* Optional: makes the link pop up slightly */
+}
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 30px rgb(75, 128, 0)); }
+    50% { filter: drop-shadow(0 0 40px #ff1d15); }
+    100% { filter: drop-shadow(0 0 50px Yellow); }
+}
+
+.hero-img img:hover {
+    animation: pulseGlow 1.5s infinite ease-in-out;
+}
+
+/* Container for the page content */
+.container {
+    padding: 60px 10%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Page Title Styling */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+/* --- BLOG CARD STYLE --- */
+.blog-card {
+    background: #161b22; /* Slightly lighter than pure black */
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #30363d;
+    text-align: center;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    border-color: #DF8908; /* Glows on hover */
+}
+
+.blog-link {
+    font-size: 1.8rem;
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.solution-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(270deg, #DF8908, #ff1d15);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* --- RESEARCHER HIGHLIGHT (Side-by-Side) --- */
+.research-content {
+    display: flex;         /* Image on left, text on right */
+    align-items: center;   /* Center them vertically */
+    gap: 30px;
+    background: #0d1117;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #ff1d15; /* Cool accent border */
+}
+
+.research-img {
+    width: 150px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.research-img:hover {
+    filter: drop-shadow(0 0 10px #DF8908);
+}
+
+.research-text p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #c9d1d9;
+}
+
+.research-text a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.research-text a:hover {
+    text-decoration: underline;
+}
