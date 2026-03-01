@@ -287,7 +287,7 @@ background: linear-gradient(270deg, #DF8908 10%, #ff1d15 100%);
 
 body {
     /* 1. Image ka path */
-    background-image: url('/sakamoto.webp'); 
+    background-image: url('sakamoto.webp'); 
 
     /* 2. Image ko stretch hone se bachata hai aur poora area cover karta hai */
     background-size: cover; 
@@ -304,7 +304,7 @@ body {
 
  .wow{
     /* 1. Image ka path */
-    background-image: url('/jj.avif'); 
+    background-image: url('jj.avif'); 
 
     /* 2. Image ko stretch hone se bachata hai aur poora area cover karta hai */
     background-size: cover; 
@@ -333,7 +333,7 @@ body {
 }
 
 .writeups-header span {
-    color: #DF8908; /* Your theme orange color */
+    color: #DF8908; /*  theme orange color ;) flag{666c61677b6c65747320636f6e6e6563742021217d} */
 }
 
 /* Flexbox Layout for Cards */
@@ -399,3 +399,4 @@ body {
 .writeup-card.highlight {
     border-left: 4px solid #DF8908;
 }
+
