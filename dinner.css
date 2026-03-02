@@ -1,3 +1,69 @@
+/* --- MOBILE RESPONSIVE FIX --- */
+
+@media (max-width: 768px) {
+    /* 1. Navbar: Links ko row ki jagah stack ya wrap karo */
+    .nav-links {
+        gap: 15px;
+        padding: 20px 10px;
+        flex-wrap: wrap; /* Links niche shift ho jayenge agar jagah nahi hogi */
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .contact {
+        padding: 8px 15px;
+    }
+
+    /* 2. Hero Section: Side-by-side ko Vertical kar do */
+    .hero {
+        padding: 40px 5%;
+    }
+
+    .hero-container {
+        flex-direction: column; /* Image upar, Text niche */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-img img {
+        width: 80%; /* Mobile screen ke hisaab se auto-size */
+        max-width: 300px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* Chota font mobile ke liye */
+    }
+
+    /* 3. Research/Blog Content: Stack vertically */
+    .research-content, .writeup-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .research-img {
+        width: 120px;
+        margin: 0 auto;
+    }
+
+    /* 4. Background Image Fix for Android */
+    body {
+        background-attachment: scroll; /* Android chrome fixed background mein lag karta hai */
+    }
+
+    /* 5. Social Icons */
+    .social-icons {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
+
 body {
     background-color: black;
     margin: 0;
@@ -399,4 +465,5 @@ body {
 .writeup-card.highlight {
     border-left: 4px solid #DF8908;
 }
+
 
